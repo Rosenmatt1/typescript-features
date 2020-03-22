@@ -36,6 +36,19 @@ const logNumber: (i: number) => void = (i: number) => {
 
 // 1.Function that returns the 'any' type
 const json = '{"x": 10, "y": 20}';
-const coordinates = JSON.parse(json);
+const coordinates: {x: number; y: number} = JSON.parse(json);
 console.log(coordinates) //{x: 10, y:20};
 //Avoid using 'any' at all costs
+
+// 2. When we declare variable on one line and initialize it later
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean;
+
+for (let i = 0; i <= words.length; i++) {
+  if (words[i] === 'green') {
+    foundWord = true
+    console.log(foundWord)
+  }
+}
+
+
