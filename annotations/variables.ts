@@ -10,7 +10,7 @@ let now: Date = new Date();
 
 //Array
 let colors: string[] = ['red', 'green', 'blue'];
-let numbers: number[] = [1, 2, 3];
+// let numbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, true, false];
 
 //Classes
@@ -48,6 +48,18 @@ for (let i = 0; i <= words.length; i++) {
   if (words[i] === 'green') {
     foundWord = true
     console.log(foundWord)
+  }
+}
+
+// 3.  Variable whose type can not be inferred correctly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i <= numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i]
+  } else {
+    numberAboveZero = false
   }
 }
 
