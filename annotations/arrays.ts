@@ -11,7 +11,7 @@ const carsByColor: string[][] = []
 const carsByMake = [ ['Ford f150'], ['corolla'], ['camaro']]
 
 // Help with inference when extracting values
-const car = carMakers[0];
+// const car = carMakers[0];
 const myCar = carMakers.pop()
 
 //prevent incompatible values
