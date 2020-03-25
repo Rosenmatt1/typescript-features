@@ -14,9 +14,9 @@ let colors: string[] = ['red', 'green', 'blue'];
 let truths: boolean[] = [true, true, false];
 
 //Classes
-class Car {
+// class Car {
 
-}
+// }
 
 // let car: Car = new Car();
 

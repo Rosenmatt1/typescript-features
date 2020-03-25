@@ -1,22 +1,31 @@
 class Vehicle {
-  drive(): void {
-    console.log('chugga chugga')
-  }
-  honk(): void {
+  // public drive(): void {
+  //   console.log('chugga chugga')
+  // }
+
+  protected honk(): void {
     console.log('honk honk')
   }
+
+  color: string;
 }
 
 class Car extends Vehicle {
   //this drive function overrides the Vehicle class drive function
-  drive(): void {
+
+  //by making private can only call drive function from within class
+  private drive(): void {
     console.log('vroom')
+  }
+
+  startDrivingProcess(): void {
+    this.drive();
   }
 }
 
 const car = new Car()
-  car.drive()
-  car.honk()
+  car.startDrivingProcess();
+  // car.honk()
 
 const vehicle = new Vehicle();
   // vehicle.drive()
